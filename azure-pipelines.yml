@@ -17,16 +17,3 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-- task: aquasecScanner@4
-  inputs:
-    image: 'img-name-Aqua-bb'
-    scanType: 'local'
-    containerRuntime: 'docker'
-    register: false
-    hideBase: false
-    showNegligible: false
-    windowsScannerVersion: '6.5.0'
-    connection: 'testconn'
-    scanMalware: true
-    showWillNotFix: true
-    registerCompliant: true

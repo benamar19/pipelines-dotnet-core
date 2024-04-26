@@ -20,10 +20,10 @@ steps:
   displayName: 'Run a multi-line script'
 - task: SonarQubePrepare@5
   inputs:
-    SonarQube: 'sonarqube-conn-bb'
+    SonarQube: 'sonarqube-conn-bb-1'
     scannerMode: 'MSBuild'
-    projectKey: 'dotNetAppbb'
-    projectName: 'dotNetAppbb'
+    projectKey: 'dotNetSonarQubeApp'
+    projectName: 'dotNetSonarQubeApp'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'

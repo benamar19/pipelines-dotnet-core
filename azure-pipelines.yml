@@ -18,6 +18,12 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'sonarqube-conn-bb-1'
+    scannerMode: 'MSBuild'
+    projectKey: 'dotNetSonarApp'
+    projectName: 'dotNetSonarApp'
 - task: SonarQubeAnalyze@5
   inputs:
     jdkversion: 'JAVA_HOME_11_X64'
